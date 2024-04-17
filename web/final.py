@@ -43,7 +43,7 @@ def pdf_to_text(file_path):
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
 # Convert PDF to text
-text = pdf_to_text(os.path.join('./', '../2024.pdf'))
+text = pdf_to_text(os.path.join('./', './2024.pdf'))
 docs = [Document(page_content=x) for x in text_splitter.split_text(text)] #very important converting str to documents
 # texts = text_splitter.split_documents(docs)
 texts= docs
